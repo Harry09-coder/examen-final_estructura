@@ -76,6 +76,42 @@ Nodo *insertar(Nodo *raiz, int valor)
 	}
 return raiz;
 }
+
+//desicion o Realizar la búsqueda y mostrar el mensaje correspondiente (decisión).
+
+void mostrarMensaje(int valor){
+	cout<<"te interesa el deporte\n";
+	if (valor == 12 || valor == 8 || valor == 15){
+		cout <<"Practica DEPORTES DE EQUIPO\n";
+		if (valor == 8)
+		cout<<"Practica FÚTBOL\n";
+		if (valor == 15)
+		cout<<"Practica VOLEIBOL\n";
+	} else if (valor == 30 || valor == 25 || valor == 35){
+		cout<<"Practica DEPORTES INDIVIDUALES\n";
+		if (valor == 25)
+		cout<<"Practica NATACIÓN\n";
+		if(valor == 35)
+		cout<<"Practica TENIS\n";
+	}
+}
+
+//BUSCAR NODO Y MOSTRAR DECISION
+bool buscarYDecidir(Nodo* raiz, int valor)
+{
+	if(raiz == null) return false;
+	if(raiz->valor == valor){
+		mostrarMensaje(valor);
+		return true;
+	}else if (valor < raiz -> valor){
+		return buscarYDecidir(raiz->izq, valor);
+	} else {
+		return buscarYDecidir(raiz->der, valor);
+	}
+}
+
+
+
 int main(){
 	setlocale(LC_CTYPE,"Spanish");
 	Nodo *raiz=NULL;
