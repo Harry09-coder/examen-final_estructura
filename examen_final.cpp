@@ -15,6 +15,11 @@ Nodo *nuevoNodo(int valor){
 	return nodo;
 }
 
+//función para limpiar
+void limpiarConsola() {
+    system("cls");
+}
+
 //funcion de preorden
 void preorden(Nodo *nodo){
 	if(nodo!=NULL)
