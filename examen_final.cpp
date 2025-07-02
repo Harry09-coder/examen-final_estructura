@@ -209,7 +209,7 @@ void menu() {
                 cout << "Saliendo del programa...\n";
                   cin >> valor;
                 
-                    cout << "Valor no encontrado en el arbol." << endl;
+                
                 break;
     } while (opcion != 6);
 
