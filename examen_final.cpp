@@ -90,7 +90,7 @@ int main(){
 	}
 return 0;
 }
-
+// Funcion principal con menu interactivo
 void menu() {
     Nodo* raiz = NULL;
     int opcion, valor;
@@ -109,37 +109,43 @@ void menu() {
 
         switch (opcion) {
             case 1:
-                //insertar nodo
+                case 1:
                 cout << "Ingrese el valor del nodo: ";
+                cin >> valor;
+                raiz = insertar(raiz, valor);
                 break;
 
             case 2:
-                // recorrido inorden
-                cout << " "Recorrido inorden:";
+                cout << "Recorrido inorden: ";
+                inorden(raiz);
+                cout << endl;
                 break;
-
             case 3:
-                //recorrido preorden
-                cout << "Recorrido preorden:";
+                  cout << "Recorrido preorden: ";
+                preorden(raiz);
+                cout << endl;
                 break;
 
             case 4:
-                //recorrido postorden
-                cout << "Recorrido postorden: ";
+                 cout << "Recorrido postorden: ";
+                postorden(raiz);
+                cout << endl;
                 break;
 
             case 5:
-                // a busqueda y mostrar decision
-                cout << "Ingrese el valor a buscar: ";
+                 cout << "Ingrese el valor a buscar: ";
+                cin >> valor;
+                if (!buscarYMostrar(raiz, valor))
+                    cout << "Valor no encontrado en el arbol." << endl;
                 break;
 
             case 6:
                 cout << "Saliendo del programa...\n";
-                salir = true;
+                  cin >> valor;
+                if (!buscarYMostrar(raiz, valor))
+                    cout << "Valor no encontrado en el arbol." << endl;
                 break;
+    } while (opcion != 6);
 
-            default:
-                cout << "Opcion no valida. Intente nuevamente.\n";
-        }
-
-    } while (!salir);
+    return 0;
+}
