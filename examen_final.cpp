@@ -86,8 +86,8 @@ int main(){
 return 0;
 }
 
-void menu()
-Nodo *raiz = NULL;
+void menu() {
+    Nodo* raiz = NULL;
     int opcion, valor;
     bool salir = false;
 
