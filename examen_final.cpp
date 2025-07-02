@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+#include <windows.h>
 //estructura que tendra en la estructura
 struct Nodo {
 	int dato;
