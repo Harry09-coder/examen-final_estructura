@@ -178,37 +178,37 @@ void menu() {
                 case 1:
                 cout << "Ingrese el valor del nodo: ";
                 cin >> valor;
-                raiz = insertar(raiz, valor);
+                
                 break;
 
             case 2:
                 cout << "Recorrido inorden: ";
-                inorden(raiz);
+                
                 cout << endl;
                 break;
             case 3:
                   cout << "Recorrido preorden: ";
-                preorden(raiz);
+                
                 cout << endl;
                 break;
 
             case 4:
                  cout << "Recorrido postorden: ";
-                postorden(raiz);
+                
                 cout << endl;
                 break;
 
             case 5:
                  cout << "Ingrese el valor a buscar: ";
                 cin >> valor;
-                if (!buscarYMostrar(raiz, valor))
+                
                     cout << "Valor no encontrado en el arbol." << endl;
                 break;
 
             case 6:
                 cout << "Saliendo del programa...\n";
                   cin >> valor;
-                if (!buscarYMostrar(raiz, valor))
+                
                     cout << "Valor no encontrado en el arbol." << endl;
                 break;
     } while (opcion != 6);
