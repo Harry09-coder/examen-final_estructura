@@ -91,3 +91,56 @@ int main(){
 		raiz=insertar(raiz, valor);
 	}
 }
+void menu()
+Nodo *raiz = NULL;
+    int opcion, valor;
+    bool salir = false;
+
+    do {
+        cout << "\n********************\n";
+        cout << "Menu\n";
+        cout << "1. Insertar nodo\n";
+        cout << "2. Mostrar recorrido inorden\n";
+        cout << "3. Mostrar recorrido preorden\n";
+        cout << "4. Mostrar recorrido postorden\n";
+        cout << "5. Buscar valor y mostrar decision\n";
+        cout << "6. Salir\n";
+        cout << "Seleccione una opcion: ";
+        cin >> opcion;
+
+        switch (opcion) {
+            case 1:
+                //insertar nodo
+                cout << "Ingrese el valor del nodo: ";
+                break;
+
+            case 2:
+                // recorrido inorden
+                cout << " "Recorrido inorden:";
+                break;
+
+            case 3:
+                //recorrido preorden
+                cout << "Recorrido preorden:";
+                break;
+
+            case 4:
+                //recorrido postorden
+                cout << "Recorrido postorden: ";
+                break;
+
+            case 5:
+                // a busqueda y mostrar decision
+                cout << "Ingrese el valor a buscar: ";
+                break;
+
+            case 6:
+                cout << "Saliendo del programa...\n";
+                salir = true;
+                break;
+
+            default:
+                cout << "Opcion no valida. Intente nuevamente.\n";
+        }
+
+    } while (!salir);
