@@ -1,12 +1,12 @@
 #include<iostream>
 using namespace std;
-
+//estructura que tendra en la estructura
 struct Nodo {
 	int dato;
 	Nodo *izq;
 	Nodo *der;
 };
-
+//cramos un nuevo nodo
 Nodo *nuevoNodo(int valor){
 	Nodo *nodo=new Nodo();
 	nodo->dato=valor;
@@ -14,6 +14,8 @@ Nodo *nuevoNodo(int valor){
 	nodo->der=NULL;
 	return nodo;
 }
+
+//funcion de preorden
 void preorden(Nodo *nodo){
 	if(nodo!=NULL)
 	{
@@ -23,6 +25,7 @@ void preorden(Nodo *nodo){
 	}
 }
 
+//funcion de inorden
 void inorden(Nodo *nodo)
 {
 	if(nodo != NULL)
@@ -33,6 +36,7 @@ void inorden(Nodo *nodo)
 	}
 }
 
+//funcion postorden
 void postorden(Nodo *nodo)
 {
 	if(nodo != NULL)
@@ -43,6 +47,7 @@ void postorden(Nodo *nodo)
 	}
 }
 
+//funcion para que el usuario ingrese los valores y no sean repetidos
 Nodo *insertar(Nodo *raiz, int valor)
 {
 	if(raiz==NULL)
@@ -78,19 +83,9 @@ int main(){
 		cin>>valor;
 		raiz=insertar(raiz, valor);
 	}
+return 0;
 }
-int main(){
-	Nodo *raiz=NULL;
-	int n, valor, i;
-	cout<<"Cúantos valores seas insertar: ";
-	cin>>n;
-	for (i=0;i<n;i++)
-	{
-		cout<<"Ingrese valor: ";
-		cin>>valor;
-		raiz=insertar(raiz, valor);
-	}
-}
+
 void menu()
 Nodo *raiz = NULL;
     int opcion, valor;
