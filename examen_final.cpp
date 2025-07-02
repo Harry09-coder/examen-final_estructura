@@ -1,7 +1,7 @@
 #include<iostream>
-using namespce std;
+using namespace std;
 
-struct nodo {
+struct Nodo {
 	int dato;
 	Nodo *izq;
 	Nodo *der;
@@ -17,19 +17,19 @@ Nodo *nuevoNodo(int valor){
 void preorden(Nodo *nodo){
 	if(nodo!=NULL)
 	{
-		cout<<nodo->dato>>" ";
+		cout<<nodo->dato<<" ";
 		preorden(nodo->izq);
 		preorden(nodo->der);
 	}
 }
 
-void iborden(Nodo *nodo)
+void inorden(Nodo *nodo)
 {
 	if(nodo != NULL)
 	{
-		indorden(nodo->izq);
+		inorden(nodo->izq);
 		cout<<nodo->dato<<" ";
-		inodrden(nodo->der);
+		inorden(nodo->der);
 	}
 }
 
@@ -51,7 +51,7 @@ Nodo *insertar(Nodo *raiz, int valor)
 	}
 	if(valor<raiz->dato)
 	{
-		raiz->izq = insertar(raiz->);
+		raiz->izq = insertar(raiz->izq,valor);
 	}
 	else
 	{
@@ -65,6 +65,19 @@ Nodo *insertar(Nodo *raiz, int valor)
 		}
 	}
 return raiz;
+}
+int main(){
+	setlocale(LC_CTYPE,"Spanish");
+	Nodo *raiz=NULL;
+	int n, valor, i;
+	cout<<"Cúantos valores seas insertar: ";
+	cin>>n;
+	for (i=0;i<n;i++)
+	{
+		cout<<"Ingrese valor: ";
+		cin>>valor;
+		raiz=insertar(raiz, valor);
+	}
 }
 int main(){
 	Nodo *raiz=NULL;
