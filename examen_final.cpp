@@ -52,6 +52,36 @@ void postorden(Nodo *nodo)
 	}
 }
 
+//funcion para mostrar inorden, postorden y preorden
+void mostrarInorden(Nodo* arbol) {
+    if (arbol == NULL) {
+        return;
+    } else {
+        mostrarInorden(arbol->izquierdo);
+        cout << arbol->dato << " ";
+        mostrarInorden(arbol->derecho);
+    }
+}
+
+void mostrarPreorden(Nodo* arbol) {
+    if (arbol == NULL) {
+        return;
+    } else {
+        cout << arbol->dato << " ";
+        mostrarPreorden(arbol->izquierdo);
+        mostrarPreorden(arbol->derecho);
+    }
+}
+
+void mostrarPostorden(Nodo* arbol) {
+    if (arbol == NULL) {
+        return;
+    } else {
+        mostrarPostorden(arbol->izquierdo);
+        mostrarPostorden(arbol->derecho);
+        cout << arbol->dato << " ";
+    }
+}
 //funcion para que el usuario ingrese los valores y no sean repetidos
 Nodo *insertar(Nodo *raiz, int valor)
 {
