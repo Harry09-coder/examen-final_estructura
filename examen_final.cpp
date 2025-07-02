@@ -90,7 +90,7 @@ int main(){
 	}
 return 0;
 }
-// Funcion principal con menu interactivo
+// Funcion menu
 void menu() {
     Nodo* raiz = NULL;
     int opcion, valor;
